@@ -1,0 +1,11 @@
+cd .\dio_bank\
+.\.venv\Scripts\activate
+
+poetry run flask --app src.app init-db
+poetry run flask --app src.app run --debug
+
+poetry run flask --app src.app db migrate -m 'Initital Migration.'
+poetry run flask --app src.app db upgrade
+
+poetry env info
+colar caminho C:\Users\Marcelo\Desktop\Desenvolvimento de APIs com Flask\dio_bank\.venv no interpreter
