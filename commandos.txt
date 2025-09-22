@@ -2,6 +2,7 @@ cd .\dio_bank\
 .\.venv\Scripts\activate
 
 poetry run flask --app src.app init-db
+ $env:ENVIRONMENT="development"
 poetry run flask --app src.app run --debug
 
 poetry run flask --app src.app db migrate -m 'Initital Migration.'
